@@ -93,7 +93,13 @@ girls_given_words2 = ( \
         '静香','凌薇','雅静','雪丽','依娜','婉玗','书怡','诗茵','灵静','睿婕','婉婷','亭谚'
     )
 
-for i in range(1,100000):
+
+filename = "name.txt"
+f = open(filename, 'w')
+line = "----随机名字----\n"
+f.write(line)
+
+for i in range(1,100):
 
     one_name= random.choice(family_names )
     #print('\n now family name is %s'%(one_name))
@@ -122,3 +128,7 @@ for i in range(1,100000):
 
                 # print("\n now full name is %s"%(full_name))
     print(full_name)
+
+    f.write(full_name)
+    f.write('\n')
+f.close()
